@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>FDH_Test_SQLDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{6f771ef0-266c-4e28-bb87-ff01a7818b72}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>FDH_Test_SQLDB</RootNamespace>
+    <AssemblyName>FDH_Test_SQLDB</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="bkp\" />
+    <Folder Include="bkp\Tables\" />
+    <Folder Include="metadata\" />
+    <Folder Include="metadata\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="metadata\Stored Procedures\" />
+    <Folder Include="bkp\Stored Procedures\" />
+    <Folder Include="Database Triggers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="bkp\Tables\Details_1.sql" />
+    <Build Include="bkp\Tables\job_obj_details_1.sql" />
+    <Build Include="bkp\Tables\job_object_details_1.sql" />
+    <Build Include="bkp\Tables\lkptable_1.sql" />
+    <Build Include="bkp\Tables\Mohan_1.sql" />
+    <Build Include="bkp\Tables\mohan_piv_1.sql" />
+    <Build Include="bkp\Tables\obj_col_mapping_1.sql" />
+    <Build Include="bkp\Tables\object_column_mapping_11082023_1.sql" />
+    <Build Include="bkp\Tables\pbi_tables_1.sql" />
+    <Build Include="bkp\Tables\recon_fa_sap_records_1.sql" />
+    <Build Include="bkp\Tables\source_job_Dependency_1.sql" />
+    <Build Include="bkp\Tables\TEST_1.sql" />
+    <Build Include="bkp\Tables\viewname_s4_1.sql" />
+    <Build Include="bkp\Tables\viewname_s4_errorlog_1.sql" />
+    <Build Include="metadata\Tables\audit_log_1.sql" />
+    <Build Include="metadata\Tables\batch_run_details_1.sql" />
+    <Build Include="metadata\Tables\email_details_1.sql" />
+    <Build Include="metadata\Tables\error_log_1.sql" />
+    <Build Include="metadata\Tables\execution_log_details_1.sql" />
+    <Build Include="metadata\Tables\job_1.sql" />
+    <Build Include="metadata\Tables\job_object_details_1.sql" />
+    <Build Include="metadata\Tables\job_object_details_audit_1.sql" />
+    <Build Include="metadata\Tables\metadata_details_1.sql" />
+    <Build Include="metadata\Tables\object_1.sql" />
+    <Build Include="metadata\Tables\object_column_mapping_1.sql" />
+    <Build Include="metadata\Tables\oraclefilter_details_1.sql" />
+    <Build Include="metadata\Tables\powerbi_dataset_details_1.sql" />
+    <Build Include="metadata\Tables\powerbi_dataset_details_test_0609_1.sql" />
+    <Build Include="metadata\Tables\sap_filters_threshold_1.sql" />
+    <Build Include="metadata\Tables\sapfilter_details_1.sql" />
+    <Build Include="metadata\Tables\schema_changes_track_1.sql" />
+    <Build Include="metadata\Tables\source_1.sql" />
+    <Build Include="metadata\Tables\source_job_dependency_1.sql" />
+    <Build Include="metadata\Tables\source_job_mapping_1.sql" />
+    <Build Include="metadata\Tables\vbrp_historical_records_1.sql" />
+    <Build Include="dbo\Views\view_metadata_1.sql" />
+    <Build Include="Security\FDH_Finance_Reader_1.sql" />
+    <Build Include="Security\eaaz_it_finance_data_hub_dev_sqldb_dbowner_1.sql" />
+    <Build Include="Security\eaaz_it_finance_data_hub_dev_sqldb_dbread_1.sql" />
+    <Build Include="Security\eaaz_it_finance_data_hub_dev_sqldb_developer_1.sql" />
+    <Build Include="Security\fdhsyneusdev002_1.sql" />
+    <Build Include="Security\RoleMemberships_1.sql" />
+    <Build Include="Security\RoleMemberships_2.sql" />
+    <Build Include="Security\RoleMemberships_3.sql" />
+    <Build Include="Security\RoleMemberships_4.sql" />
+    <Build Include="Security\RoleMemberships_5.sql" />
+    <Build Include="Security\RoleMemberships_6.sql" />
+    <Build Include="dbo\Functions\CamelCase_1.sql" />
+    <Build Include="dbo\Stored Procedures\sp_runquery_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_update_audit_table_error_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_update_audit_log_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_prod_data_load_getactivetablelist_refined_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_powerbi_batch_logging_test_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_powerbi_batch_logging_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_summarized_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_recon_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_raw_refined_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_powerbi_test_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_powerbi_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_dq_test_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_curated_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivetablelist_certified_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivedatasetlist_powerbi_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_email_details_summ_recon_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_email_details_pbi_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_email_details_fccsdelete_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_email_details_certified_curated_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_email_details_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_batch_logging_test_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_batch_logging_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_audit_reconcile_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_adhoc_batch_logging_1.sql" />
+    <Build Include="bkp\Stored Procedures\prc_getactivetablelist_raw_refined_1.sql" />
+    <Build Include="bkp\Stored Procedures\prc_email_details_summ_recon_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_update_last_run_date_fact_dim_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_update_last_run_date_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_update_execution_log_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_update_error_log_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getexecutionlist_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_getactivefccsfilelist_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_email_details_generic_1.sql" />
+    <Build Include="metadata\Stored Procedures\prc_email_details_fccsvalidation_1.sql" />
+    <Build Include="bkp\Stored Procedures\test_proc_1.sql" />
+    <Build Include="bkp\Stored Procedures\test_pbi_1.sql" />
+    <Build Include="bkp\Stored Procedures\prc_update_s4_errorlog_1.sql" />
+    <Build Include="bkp\Stored Procedures\prc_s4_viewnames_1.sql" />
+    <Build Include="bkp\Stored Procedures\prc_recon_fa_sap_records_1.sql" />
+    <Build Include="bkp\Stored Procedures\prc_getactivetablelist_1.sql" />
+    <Build Include="Database Triggers\ddl_db_trigger_1.sql" />
+    <Build Include="Security\bkp_1.sql" />
+    <Build Include="Security\metadata_1.sql" />
+  </ItemGroup>
+</Project>

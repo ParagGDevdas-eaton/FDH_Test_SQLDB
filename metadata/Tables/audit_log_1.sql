@@ -1,0 +1,28 @@
+﻿CREATE TABLE [metadata].[audit_log] (
+    [log_id]                   INT           IDENTITY (1, 1) NOT NULL,
+    [trigger_id]               VARCHAR (500) NULL,
+    [batch_id]                 BIGINT        NULL,
+    [source_id]                INT           NULL,
+    [job_id]                   INT           NULL,
+    [job_object_id]            INT           NULL,
+    [source_row_count]         INT           NULL,
+    [target_row_count]         INT           NULL,
+    [rejeted_row_count]        INT           NULL,
+    [rejected_duplicate_count] INT           NULL,
+    [target_size]              BIGINT        NULL,
+    [log_date]                 DATETIME      NULL,
+    [rejected_file_path]       VARCHAR (500) NULL,
+    [inputfile_row_count]      INT           NULL,
+    [insert_row_count]         INT           NULL,
+    [update_row_count]         INT           NULL,
+    [load_type]                VARCHAR (100) NULL,
+    [status]                   VARCHAR (50)  NULL,
+    [query]                    VARCHAR (MAX) NULL,
+    [object_start_date]        DATETIME      NULL,
+    [object_end_date]          DATETIME      NULL,
+    [last_run_date]            DATETIME      NULL,
+    [current_run_date]         DATETIME      NULL,
+    [rejected_commonlog_path]  VARCHAR (500) NULL,
+    CONSTRAINT [PK_audit_log] PRIMARY KEY CLUSTERED ([log_id] ASC)
+);
+

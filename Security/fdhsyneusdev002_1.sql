@@ -1,0 +1,2 @@
+﻿CREATE USER [fdhsyneusdev002] FOR EXTERNAL PROVIDER;
+
